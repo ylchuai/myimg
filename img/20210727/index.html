@@ -3,17 +3,20 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<script>
+		var cell;
+		var main = document.getElementById('main');
+		var max = window.location.search.substr(1).split('&')[0].split('=')[1];
+		for(var i = 0; i < max; i++) {
+			cell = document.createElement('img');
+			cell.src='./' + i + '.jpg';
+			main.append(cell)
+			main.append('<\br>');
+		}
+	</script>
 </head>
 <body>
-	<img src="./20210727_01.jpg" alt="">
-	<br>
-	<img src="./20210727_01.jpg" alt="">
-	<br>
-	<img src="./20210727_01.jpg" alt="">
-	<br>
-	<img src="./20210727_01.jpg" alt="">
-	<br>
-	<img src="./20210727_01.jpg" alt="">
-	<br>
+	<div id='main'>
+	</div>
 </body>
 </html>
